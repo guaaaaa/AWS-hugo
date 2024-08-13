@@ -19,10 +19,9 @@ phases:
       - hugo
   post_build:
     commands:
-      - aws s3 sync . s3://personal-portfolio-gu/
       - echo Build completed on `date`
 
 artifacts:
   files:
-    - '*'
+    - '**/*'
   base-directory: ''
