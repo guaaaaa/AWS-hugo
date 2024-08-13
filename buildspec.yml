@@ -17,7 +17,7 @@ phases:
     commands:
       - rm -rf public
       - hugo
-      - aws s3 sync public/ s3://bucket-name --region region --acl public-read --delete
+      - aws s3 sync public/ s3://personal-portfolio-gu/ --region us-east-1 --acl public-read --delete
   post_build:
     commands:
       - echo Build completed on `date`
