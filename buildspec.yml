@@ -20,4 +20,5 @@ phases:
       - aws s3 sync public/ s3://personal-portfolio-gu/ --region us-east-1 --delete
   post_build:
     commands:
+      - aws s3 sync --delete s3://personal-portfolio-gu/
       - echo Build completed on `date`
